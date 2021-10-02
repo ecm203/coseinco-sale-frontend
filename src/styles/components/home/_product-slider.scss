@@ -1,0 +1,48 @@
+:root {
+    --swiper-navigation-size: 25px;
+}
+.product-slider {
+    width: 100%;
+    height: 100%;
+    &:hover .swiper-button-prev,
+    &:hover .swiper-button-next {
+        opacity: 1;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: $ui-background;
+        padding: 25px;
+        border-radius: $border-radious;
+        outline: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+
+        @include to(lg) {
+            display: none;
+        }
+    }
+    .swiper-button-prev {
+        left: 0;
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+    &__pagination {
+        text-align: center;
+        .swiper-pagination-bullet {
+            outline: none;
+            width: rem(10px);
+            height: rem(10px);
+            opacity: 1;
+            background-color: $g-30;
+            transition: all 0.2s;
+        }
+        .swiper-pagination-bullet-active {
+            width: rem(20px);
+            border-radius: 50px;
+            background: $g-70;
+        }
+    }
+}

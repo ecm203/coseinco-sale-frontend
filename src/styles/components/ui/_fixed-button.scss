@@ -1,0 +1,31 @@
+.fixed-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: rem(20px);
+    z-index: 10;
+    &__box {
+        width: rem(60px);
+        height: rem(60px);
+        box-shadow: $box-shadow;
+        border-radius: 50%;
+        padding: rem(10px);
+        &:hover {
+            cursor: pointer;
+        }
+        &--scroll{
+            background-color: $interactive;
+            margin-bottom: 1rem;
+        }
+        &--wtsp{
+            background-color: #1ebea5;
+        }
+        .box__icon {
+            width: rem(40px);
+            height: rem(40px);
+            path {
+                fill: $ui-background;
+            }
+        }
+    }
+}

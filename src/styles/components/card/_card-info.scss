@@ -1,0 +1,9 @@
+.card-info{
+    background-color: $ui-background;
+    border-radius: $border-radious;
+    &__icon{
+        align-self: center;
+        min-width: 3rem;
+        min-height: 3rem;
+    }
+}

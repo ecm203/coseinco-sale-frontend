@@ -1,0 +1,233 @@
+input {
+    outline: none;
+}
+
+.input-group {
+    &__label {
+        color: $text-02;
+        @include t--body-3($font-w-normal);
+        &--disabled {
+            color: $disabled-02;
+        }
+        &--large {
+            @include t--body-2($font-w-normal);
+        }
+    }
+    &__box {
+        position: relative;
+
+        &--header {
+            flex: 1;
+        }
+        .box__text {
+            background-color: $field-01;
+            border: 1px solid $field-01;
+            border-radius: $border-radious;
+            color: $text-01;
+            @include t--body-2($font-w-normal);
+            padding: 0.5rem 0.75rem;
+            width: 100%;
+
+            &:focus {
+                border: 1px solid $text-03;
+            }
+
+            &:disabled {
+                background-color: $disabled-01;
+                color: $disabled-02;
+                &:hover {
+                    cursor: not-allowed;
+                }
+            }
+            &--error {
+                border-color: $text-error !important;
+            }
+            &--white {
+                background-color: $field-02;
+                border: 1px solid $field-02;
+            }
+            &--icon-start {
+                padding-left: 2.25rem;
+            }
+            &--icon-end {
+                padding-right: 2.25rem;
+            }
+            &--large {
+                padding: rem(12px) 1rem;
+                @include t--body-1($font-w-normal);
+            }
+        }
+
+        .box__icon {
+            width: 1rem;
+            height: 1rem;
+            path {
+                fill: $text-03;
+                transition: all 0.2s;
+            }
+            &--end {
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translateY(-50%);
+            }
+            &--start {
+                position: absolute;
+                top: 50%;
+                left: 1rem;
+                transform: translateY(-50%);
+            }
+            &--large {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+            &--error {
+                path {
+                    fill: $text-error;
+                }
+            }
+        }
+        .box__btn {
+            background-color: transparent;
+            padding: rem(8.5px) rem(10.5px);
+            &--end {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            &:hover {
+                cursor: pointer;
+                & .box__icon {
+                    path {
+                        fill: $text-01;
+                    }
+                }
+            }
+        }
+    }
+    &__helper {
+        color: $text-02;
+        @include t--body-3($font-w-normal);
+        &--disabled {
+            color: $disabled-02;
+        }
+        &--large {
+            @include t--body-2($font-w-normal);
+        }
+        &--error {
+            color: $text-error;
+        }
+    }
+}
+
+.checkbox-wrapper {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+    line-height: rem(22px);
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkmark {
+            background-color: $interactive;
+        }
+        &:checked ~ .checkmark:after {
+            display: block;
+        }
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1.25rem;
+        width: 1.25rem;
+        border: 1px solid $ui-05;
+        border-radius: 2px;
+        &:after {
+            box-sizing: content-box;
+            content: "";
+            position: absolute;
+            display: none;
+            left: 6px;
+            top: 2px;
+            width: 3px;
+            height: 9px;
+            border: 1px solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+// <div disabled className="input-group input-group-large">
+//                 <label
+//                     className="input-group__label d-block s-mb-1"
+//                     htmlFor="input"
+//                 >
+//                     Label
+//                 </label>
+// <div className="input-group__box s-mb-05">
+//     <Search className="box__icon box__icon--end"/>
+//     <input
+//         className="box__text box__text--icon-end"
+//         type="text"
+//     />
+// </div>
+//                 <span className="input-group__helper"> Helper text </span>
+//             </div>
+
+// <label class="checkbox-wrapper">One
+//             <input type="checkbox"/>
+//             <span class="checkmark"></span>
+//         </label>
+
+
+.input-select{
+    &--error{
+        .input-select__control {
+            border: 1px solid $text-error !important;
+        }
+    }
+    &__control{
+        // min-width: rem(234px);
+        background-color: $field-01 !important;
+        min-height: 35px !important;
+        height: 35px !important;
+        border: none !important;
+        &--is-focused{
+            border: 1px solid $interactive !important;
+            box-shadow: none !important;
+        }
+        &--menu-is-open{
+            & .input-select__indicators{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &--large{
+        & .input-select__control{
+            height: 44px !important;
+        }
+        & .input-select__value-container{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+    &--white{
+        & .input-select__control{
+            background-color: $field-02 !important;
+        }
+    }
+    &__indicator-separator{
+        display: none;
+    }
+    &__menu{
+        background-color: $field-01 !important;
+    }
+}

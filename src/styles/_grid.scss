@@ -1,0 +1,39 @@
+$breakpoints : (
+  s  : 0,
+  sm  : 640px,
+  md : 992px,
+  lg : 1024px,
+);
+
+$max-width        : 1280px;
+$l-unit           : .5rem;
+$gap              : $l-unit * 2;
+$container        : flex-container;
+$item             : flex-item;
+$grid-container   : grid-container;
+$max-grid-columns : 12;
+
+@import "~ed-grid/ed-grid";
+
+:root{
+    @include from(lg) {
+        --vertical-block-space : #{$l-unit * 4};
+        --gap                  : #{$l-unit * 2};    // 2rem
+      }
+}
+
+@include prototype('d-none', display, none);
+
+@include prototype('d-flex', display, flex);
+
+@include prototype('d-block', display, block);
+
+@include prototype('d-inline', display, inline);
+
+@include prototype('d-grid', display, grid);
+
+@include prototype('d-inline-block', display, inline-block);
+
+
+@include prototype('w-100', width, 100%);
+

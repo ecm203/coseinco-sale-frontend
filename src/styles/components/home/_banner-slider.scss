@@ -1,0 +1,33 @@
+.banner-slider {
+    width: 100%;
+    height: 60vh;
+    .swiper-wrapper{
+        height: calc(60vh - 28px);
+        @include to(lg){
+            height: 100%;
+        }
+    }
+    &__slide {
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__pagination {
+        text-align: center;
+        @include to(lg) {
+            position: absolute;
+            z-index: 10;
+        }
+        .swiper-pagination-bullet {
+            outline: none;
+            width: rem(13px);
+            height: rem(13px);
+            opacity: 1;
+            background-color: $g-30;
+        }
+        .swiper-pagination-bullet-active {
+            background: $g-70;
+        }
+    }
+}

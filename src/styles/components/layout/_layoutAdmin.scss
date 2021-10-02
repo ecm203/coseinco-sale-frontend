@@ -1,0 +1,57 @@
+
+$page-header-bgColor: #242e42;
+$page-header-bgColor-hover: #1d2636;
+$page-header-txtColor: #dde9f8;
+$page-header-headingColor: #7889a4;
+
+
+.ui-dashboard{
+  background-color: $page-header-bgColor;
+  color: $page-header-txtColor;
+}
+
+
+.admin-menu {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.admin-menu li:last-child {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.admin-menu li > * {
+  width: 100%;
+  padding: 12px 15px;
+}
+
+.admin-menu .switcher {
+  display: inline-block;
+  width: auto;
+}
+
+.admin-menu .menu-heading h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+  margin-top: 12px;
+  color: $page-header-headingColor;
+}
+
+.admin-menu a,
+.admin-menu button {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: all .3s;
+}
+
+.admin-menu a:hover,
+.admin-menu a:focus,
+.admin-menu button:hover,
+.admin-menu button:focus {
+  background: $page-header-bgColor-hover;
+  outline: none;
+}

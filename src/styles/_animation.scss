@@ -1,0 +1,152 @@
+.animation-header-enter {
+    .animation__overlay {
+        opacity: 0;
+        transition: all 0.2s;
+    }
+    .animation__content {
+        transform: scale(1, 0);
+        transition: transform ease-in 0.2s;
+    }
+}
+.animation-header-enter-active {
+    .animation__overlay {
+        opacity: 1;
+    }
+    .animation__content {
+        transform: scale(1, 1);
+        transform-origin: top;
+    }
+}
+
+.animation-header-exit {
+    .animation__overlay {
+        opacity: 1;
+        transition: all 0.2s;
+    }
+    .animation__content {
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform ease-in 0.2s;
+    }
+}
+
+.animation-header-exit-active {
+    .animation__overlay {
+        opacity: 0;
+    }
+    .animation__content {
+        transform: scale(1, 0);
+        transform-origin: top;
+    }
+}
+
+@keyframes menuAnimation {
+    from {
+        opacity: 0;
+        transform: scale(1, 0);
+        transform-origin: top;
+    }
+    to {
+        opacity: 1;
+        transform: scale(1, 1);
+        transform-origin: top;
+    }
+}
+
+@mixin animate__menu {
+    -webkit-animation-name: menuAnimation;
+    animation-name: menuAnimation;
+
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+@mixin animate__fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+}
+
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+@mixin animate__fadeOutDown {
+    -webkit-animation-name: fadeOutDown;
+    animation-name: fadeOutDown;
+
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+}
+
+.animation__fixed-button-enter{
+    @include animate__fadeInUp();
+}
+
+
+.animation__fixed-button-exit{
+    @include animate__fadeOutDown();
+}
+
+
+
+.animation-collapsible-enter {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s ease-out;
+}
+.animation-collapsible-enter-active {
+    max-height: 500px;
+}
+
+.animation-collapsible-exit {
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height .2s ease-out;
+}
+
+.animation-collapsible-exit-active {
+    max-height: 0;
+}
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@mixin animate__fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}

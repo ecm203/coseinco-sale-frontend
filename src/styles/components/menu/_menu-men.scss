@@ -1,0 +1,13 @@
+.menu-men{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $ui-background;
+    box-shadow: $box-shadow;
+    border-radius: $border-radious;
+    width: rem(220px);
+    z-index: 100;
+
+    @include animate__menu();
+}

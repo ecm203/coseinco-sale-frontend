@@ -1,0 +1,103 @@
+$g-0: #ffffff;
+$g-10: #f4f4f4;
+$g-15: #e5e5e5;
+$g-20: #e0e0e0;
+$g-25: #cacaca;
+$g-30: #c6c6c6;
+$g-40: #a8a8a8;
+$g-50: #8d8d8d;
+$g-60: #6f6f6f;
+$g-70: #525252;
+$g-75: #4c4c4c;
+$g-80: #393939;
+$g-90: #262626;
+$g-100: #161616;
+
+$red-10: #fff1f1;
+$red-50: #fa4d56;
+$red-60: #da1e28;
+$red-70: #ba1b23;
+$red-80: #750e13;
+
+$green-10: #defbe6;
+$green-40: #42be65;
+$green-50: #24a148;
+
+$alert-10: #edf5ff;
+$alert-20: #f1c21b;
+
+$blue-10: #edf5ff;
+$blue-50: #4589ff;
+$blue-70: #0043ce;
+
+$ui-background: $g-0;
+$ui-01: $g-10;
+$ui-02: $g-0;
+$ui-03: $g-20;
+$ui-04: $g-50;
+$ui-05: $g-100;
+
+$interactive: #242e42;
+
+$text-01: $g-100;
+$text-02: $g-70;
+$text-03: $g-40;
+$text-04: $g-0;
+$text-05: $g-60;
+$text-error: $red-60;
+
+$field-01: $g-10;
+$field-02: $g-0;
+
+$inverse-01: $g-0;
+$inverse-02: $g-80;
+$inverse-support-01: $red-50;
+$inverse-support-02: $green-40;
+$inverse-support-03: $alert-20;
+$inverse-support-04: $blue-50;
+$inverse-hover-ui: $g-75;
+
+$support-01: $red-60;
+$support-02: $green-50;
+$support-03: $alert-20;
+$support-04: $blue-70;
+$notif-error-bg: $red-10;
+$notif-success-bg: $green-10;
+$notif-warning-bg: $alert-10;
+$notif-info-bg: $blue-10;
+
+$selected-ui: $g-20;
+$disabled-01: $g-10;
+$disabled-02: $g-30;
+$disabled-03: $g-50;
+
+$danger: $red-60;
+$overlay-01: rgba(22, 22, 22, 0.5);
+
+$hover-primary: #1d2636;
+$hover-ui: $g-15;
+$hover-selected-ui: $g-25;
+$hover-danger: $red-70;
+$hover-row: $g-15;
+
+$focus: $g-80;
+
+$active-primary: $g-60;
+$active-ui: $g-30;
+$active-danger: $red-80;
+
+$skeleton-01: $g-15;
+$skeleton-02: $g-30;
+
+
+.ui-bg{
+    background-color: $ui-background;
+}
+
+.ui-01{
+    background-color: $ui-01;
+}
+
+.ui-03{
+    background-color: $ui-03;
+}

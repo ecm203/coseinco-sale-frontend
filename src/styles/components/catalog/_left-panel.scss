@@ -1,0 +1,60 @@
+.s-gap-05 {
+    --gap: 8px;
+}
+
+.left-panel {
+    border-radius: $border-radious;
+    &__size-box {
+        border: 1px solid $interactive;
+        padding: rem(8px) rem(12px);
+    }
+    &__color-box {
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid $ui-03;
+        border-radius: 50%;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__trigger {
+        border-bottom: 1px solid $ui-03;
+    }
+    &__filter-applied {
+        display: flex;
+        border: 1px solid $ui-03;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem 0.25rem;
+        align-items: center;
+        transition: all 0.2s;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        .filter-applied__icon {
+            width: 1rem;
+            height: 1rem;
+            margin-left: auto;
+        }
+        .filter-applier__box-color {
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid $ui-03;
+            border-radius: 50%;
+        }
+        &:hover {
+            cursor: pointer;
+            border-color: $ui-04;
+        }
+    }
+}
+
+.catalog{
+    grid-template-rows: minmax(auto, 81px) auto;
+}
+
+.top-panel{
+    height: rem(81px);
+    @include to(lg){
+        height: rem(60px);
+    }
+}

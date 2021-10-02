@@ -1,0 +1,37 @@
+.search-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    &__grid {
+        grid-template-rows: $header-height;
+        @include to(lg) {
+            grid-template-rows: $header-height-mobile;
+        }
+    }
+    &__close {
+        width: rem(46px);
+        height: rem(46px);
+        padding: rem(7px);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__overlay {
+        background-color: $overlay-01;
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: $header-height;
+        height: 150vh;
+        z-index: 100;
+        @include to(lg) {
+            top: $header-height-mobile;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.card-category {
+    border-radius: $border-radious;
+    color: $text-04;
+    position: relative;
+
+    &__img {
+        border-radius: $border-radious;
+        width: 100%;
+    }
+
+    &__box {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 1.25rem;
+    }
+}

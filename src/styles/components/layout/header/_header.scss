@@ -1,0 +1,86 @@
+$header-height: 5rem;
+$header-height-mobile: rem(60px);
+
+.header {
+    background-color: $interactive;
+    &__container {
+        position: relative;
+        grid-template-rows: $header-height;
+        @include to(lg) {
+            width: calc(100%);
+            margin: 0;
+            grid-template-rows: $header-height-mobile;
+        }
+    }
+    &__logo{
+        color: #dde9f8;
+    }
+    &__logo-img {
+        @include to(lg) {
+            grid-template-rows: $header-height-mobile;
+        }
+    }
+    &__menu {
+        padding: rem(20px) 0;
+        @include to(lg){
+            padding: 0;
+        }
+    }
+    &__search {
+        display: flex;
+        align-items: center;
+    }
+    &__menu-item {
+        &:hover {
+            cursor: pointer;
+        }
+        @include to(lg){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25%;
+        }
+    }
+    &__list-item--menu {
+        position: relative;
+    }
+    &__link--menu {
+        &:hover .menu-men {
+            display: block;
+        }
+    }
+    &__icon {
+        width: rem(24px);
+        height: rem(24px);
+        & path{
+            fill: #dde9f8;
+        }
+        &--alert {
+            path {
+                fill: $text-error;
+            }
+        }
+    }
+    &__cart {
+        position: relative;
+        @include to(lg){
+            width: rem(24px);
+            height: rem(24px);
+        }
+        .cart__items {
+            width: rem(16px);
+            height: rem(16px);
+            left: 12px;
+            top: -4px;
+
+            @include t--heading-5();
+            line-height: rem(12px);
+            text-align: center;
+            color: $text-04;
+            position: absolute;
+
+            background: $ui-05;
+            border-radius: 50px;
+        }
+    }
+}

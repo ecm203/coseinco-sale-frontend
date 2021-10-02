@@ -1,0 +1,14 @@
+.collapsible {
+    &__trigger {
+        .trigger__icon {
+            width: rem(24px);
+            height: rem(24px);
+            transition: all 0.2s ease-out;
+        }
+        &--open {
+            .trigger__icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

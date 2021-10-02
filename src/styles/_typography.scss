@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@400;500;600;700&display=swap");
+
+$font-s-h1: #{rem(36px)};
+$font-s-h2: #{rem(24px)};
+$font-s-h3: #{rem(18px)};
+$font-s-h4: #{rem(16px)};
+$font-s-h5: #{rem(14px)};
+$font-s-h6: #{rem(12px)};
+$font-s-normal: #{rem(16px)};
+$font-s-small: #{rem(14px)};
+$font-s-smaller: #{rem(12px)};
+
+$font-heading: "Raleway", sans-serif;
+$font-body: "Montserrat", sans-serif;
+
+$font-w-normal: 400;
+$font-w-medium: 500;
+$font-w-semibold: 600;
+$font-w-bold: 700;
+
+@mixin t--heading {
+    font-family: $font-heading;
+    font-weight: $font-w-semibold;
+}
+
+@mixin t--heading-1 {
+    font-size: $font-s-h1;
+    line-height: #{rem(42px)};
+    @include t--heading();
+}
+
+@mixin t--heading-2 {
+    font-size: $font-s-h2;
+    line-height: #{rem(28px)};
+    @include t--heading();
+}
+
+@mixin t--heading-3 {
+    font-size: $font-s-h3;
+    line-height: #{rem(21px)};
+    @include t--heading();
+}
+
+@mixin t--heading-4 {
+    font-size: $font-s-h4;
+    line-height: #{rem(19px)};
+    @include t--heading();
+}
+
+@mixin t--heading-5 {
+    font-size: $font-s-h5;
+    line-height: #{rem(16px)};
+    @include t--heading();
+}
+
+@mixin t--heading-6 {
+    font-size: $font-s-h6;
+    line-height: #{rem(14px)};
+    @include t--heading();
+}
+
+h1,
+.t--heading-1 {
+    @include t--heading-1();
+}
+
+h2,
+.t--heading-2 {
+    @include t--heading-2();
+}
+
+h3,
+.t--heading-3 {
+    @include t--heading-3();
+}
+
+h4,
+.t--heading-4 {
+    @include t--heading-4();
+}
+
+h5,
+.t--heading-5 {
+    @include t--heading-5();
+}
+
+h6,
+.t--heading-6 {
+    @include t--heading-6();
+}
+
+@mixin t--body($font--weight) {
+    font-family: $font-body;
+    font-weight: $font--weight;
+}
+
+@mixin t--body-1($font--weight) {
+    font-size: $font-s-normal;
+    line-height: #{rem(20px)};
+    @include t--body($font--weight);
+}
+
+@mixin t--body-2($font--weight) {
+    font-size: $font-s-small;
+    line-height: #{rem(17px)};
+    @include t--body($font--weight);
+}
+
+@mixin t--body-3($font--weight) {
+    font-size: $font-s-smaller;
+    line-height: #{rem(15px)};
+    @include t--body($font--weight);
+}
+
+body {
+    color: $text-01;
+    @include t--body-1($font-w-normal);
+}
+
+.t--body-1 {
+    @include t--body-1($font-w-normal);
+}
+
+.t--body-2 {
+    @include t--body-2($font-w-normal);
+}
+
+.t--body-3 {
+    @include t--body-3($font-w-normal);
+}
+
+@mixin t--link {
+    font-family: $font-body;
+    font-weight: $font-w-medium;
+    text-decoration: underline;
+}
+
+@mixin t--link-1 {
+    font-size: $font-s-normal;
+    @include t--link();
+}
+
+@mixin t--link-2 {
+    font-size: $font-s-small;
+    line-height: #{rem(17px)};
+    @include t--link();
+}
+
+@mixin t--link-3 {
+    font-size: $font-s-smaller;
+    @include t--link();
+}
+
+.t--link-1 {
+    @include t--link-1();
+}
+.t--link-2 {
+    @include t--link-2();
+}
+.t--link-3 {
+    @include t--link-3();
+}
+
+@mixin t--primary {
+    color: $text-01;
+}
+
+@mixin t--secundary {
+    color: $text-02;
+}
+
+@mixin t--tertiary {
+    color: $text-03;
+}
+
+@mixin t--alert {
+    color: $text-error;
+}
+
+.t--primary {
+    @include t--primary();
+}
+
+.t--secundary {
+    @include t--secundary();
+}
+
+.t--tertiary {
+    @include t--tertiary();
+}
+
+.t--alert {
+    @include t--alert();
+}
+
+.t--price::before {
+    content: "$.";
+}
+
+.t--normal {
+    font-weight: $font-w-normal;
+}
+.t--medium {
+    font-weight: $font-w-medium;
+}
+.t--semibold {
+    font-weight: $font-w-semibold;
+}
+.t--bold {
+    font-weight: $font-w-bold;
+}
+
+b {
+    font-weight: $font-w-medium;
+}

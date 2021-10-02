@@ -1,0 +1,11 @@
+.order{
+    &__icon{
+        display: block;
+        margin: 0 auto 1rem auto;
+        width: 9rem;
+        height: 9rem;
+        path{
+            fill: $green-40;
+        }
+    }
+}

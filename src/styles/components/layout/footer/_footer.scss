@@ -1,0 +1,37 @@
+.footer{
+    background-color: $g-90;
+    color: $g-10;
+    &__divider{
+        border-bottom: 1px solid $g-80;
+    }
+    &__icon{
+        path{
+            fill:$g-10;
+        }
+    }
+    &__top{
+        padding: rem(48px) 0;
+        @include to(md){
+            padding: 1rem 0;
+        }
+    }
+    &__item,
+    &__ul   {
+        color: $g-30;
+    }
+    &__item {
+        .footer__icon{
+            width: rem(20px);
+            height: rem(20px);
+        } 
+    }
+    &__copyright{
+        background-color: $g-100;
+    }
+    &__text--wrap{
+        @include from(md){
+            max-width: rem(230px);
+        }
+    }
+}
+

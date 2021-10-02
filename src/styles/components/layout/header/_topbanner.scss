@@ -1,0 +1,13 @@
+.top-banner{
+    background-color: $interactive;
+    color: $g-30;
+    border-top: 2px solid lighten($interactive, 5%);
+
+    &__icon{
+        width: rem(20px);
+        height: rem(20px);
+        path{
+            fill: $g-30;
+        }
+    }
+}

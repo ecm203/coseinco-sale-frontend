@@ -1,0 +1,30 @@
+.card-product {
+    position: relative;
+    border-radius: $border-radious;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:hover .card-product__box .card-product__img{
+        transform: scale(1.05);
+    }
+    &__box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        overflow: hidden;
+    }
+    &__img{
+        transition: .25s ease;
+    }
+    &__offert {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0.25rem;
+        background-color: $support-01;
+        color: $text-04;
+        border-radius: $border-radious;
+    }
+}

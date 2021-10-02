@@ -1,0 +1,60 @@
+.login {
+    &__overlay {
+        background-color: $overlay-01;
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: $header-height;
+        height: 100vh;
+        z-index: 100;
+        @include to(lg){
+            top: $header-height-mobile;
+        }
+    }
+
+    &__content {
+        margin-top: 1rem;
+        width: 18.75rem;
+        @include t--body-2($font-w-normal);
+        border-radius: $border-radious;
+        text-align: center;
+        box-shadow: $box-shadow;
+        background-color: $ui-background;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1000;
+        @include to(lg) {
+            top: calc(100% + 1rem);
+            right: 1rem;
+            width: calc(100% - 2rem);
+        }
+    }
+
+    &__feedback{
+        background-color: $notif-error-bg;
+        border-radius: $border-radious;
+        border: 1px solid $support-01;
+        color: $support-01;
+    }
+
+    &__line {
+        @include t--body-3($font-w-normal);
+        align-items: center;
+        color: $text-03;
+        display: flex;
+        &::after,
+        &::before {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: $text-03;
+        }
+        &::after {
+            margin-left: 0.25rem;
+        }
+        &::before {
+            margin-right: 0.25rem;
+        }
+    }
+}

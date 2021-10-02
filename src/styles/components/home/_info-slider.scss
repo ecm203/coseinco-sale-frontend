@@ -1,0 +1,21 @@
+.info-slider{
+    width: 100%;
+    height: 100%;
+    &__pagination {
+        text-align: center;
+        .swiper-pagination-bullet {
+            outline: none;
+            width: rem(10px);
+            height: rem(10px);
+            opacity: 1;
+            background-color: $g-30;
+            transition: all .2s;
+        }
+        .swiper-pagination-bullet-active {
+            width: rem(20px);
+            border-radius: 50px;
+            background: $g-70;
+        }
+    }
+}
+

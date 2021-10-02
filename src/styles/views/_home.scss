@@ -1,0 +1,12 @@
+
+.home{
+    &__icon{
+        width: rem(24px);
+        height: rem(24px);
+    }
+    &__section{
+        @include to(lg){
+            display: block;
+        }
+    }
+}
