@@ -102,7 +102,7 @@ const DetailProduct = () => {
                 <div className="s-d-flex s-mb-1 s-main-justify s-to-column">
                     <span className="t--link-2">Asus</span>
                     <div className="input-group__helper">
-                            SKU: {product.codigoInterno}
+                            SKU: {product.SKU}
                         </div>
                 </div>
                 <h2 className="s-mb-3"> {product.nombre} </h2>

@@ -27,7 +27,7 @@ export const getNovelties = () => {
         try {
             const resp = await fetch(`${baseUrl}/api/productos`);
             const data = await resp.json()
-            dispatch(noveltiesLoaded(data.data.data));
+            dispatch(noveltiesLoaded(data.products));
 
         } catch (error) {
             console.log(error);

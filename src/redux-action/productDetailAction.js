@@ -5,9 +5,10 @@ const baseUrl = "http://localhost:5000"
 export const getProductById = (id) => {
     return async (dispatch) => {
         try {
-            const resp = await fetch(`${baseUrl}/api/productos/${id}`);
+            const resp = await fetch(`${baseUrl}/api/productos/getById/${id}`);
             const data = await resp.json();
-            dispatch(productDetailLoaded(data.data.doc));
+            console.log(data)
+            dispatch(productDetailLoaded(data.producto));
         } catch (error) {
             console.log(error);
         }

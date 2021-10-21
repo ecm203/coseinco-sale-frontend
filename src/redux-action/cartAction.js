@@ -52,7 +52,7 @@ export const getProductsById = (productsId) => {
 export const saveOrder = (orderData) => {
     return async (dispatch) => {
         try {
-            const resp = await fetch(`${baseUrl}/pedidos`, {
+            const resp = await fetch(`${baseUrl}/pedidos/create`, {
                 method: "post",
                 headers: {
                     "Content-type": "application/json",
