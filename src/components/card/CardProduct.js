@@ -17,9 +17,9 @@ const CardProduct = ({ sku, className, img, title, stock, price }) => {
                 <h4 className="card-product__info--title t--body-2 s-mb-1">
                     {title}
                 </h4>
-                <div className="input-group__helper s-mb-1">
+                {/* <div className="input-group__helper s-mb-1">
                             {stock}und. Disponibles
-                </div>
+                </div> */}
                 <span className="t--price t--heading-3">{price}</span>
             </div>
         </Link>

@@ -131,10 +131,10 @@ const DetailProduct = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="input-group__helper">
+                    {/* <div className="input-group__helper">
                         {" "}
                         {product.stock}und. disponibles{" "}
-                    </div>
+                    </div> */}
                 </div>
                 <hr className="detail-product__separator s-mb-3" />
                 <div className="s-d-flex s-mb-3">
