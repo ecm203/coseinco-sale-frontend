@@ -141,10 +141,10 @@ const DetailProduct = () => {
                     <button
                         style={{ alignSelf: "flex-end" }}
                         className="btn btn--full btn--primary btn--large s-75"
-                        disabled={product.stock === 0}
+                        disabled={product.estado === 'inhabilitado'}
                         onClick={handleAddToCart}
                     >
-                        Añadir al carrito
+                        {product.estado === 'inhabilitado' ? 'No disponible': 'Añadir al carrito'}
                     </button>
                 </div>
                 <hr className="detail-product__separator s-mb-3" />

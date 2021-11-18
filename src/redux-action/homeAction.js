@@ -27,7 +27,8 @@ export const getNovelties = () => {
         try {
             const resp = await fetch(`${baseUrl}/api/productos`);
             const data = await resp.json()
-            dispatch(noveltiesLoaded(data.products));
+            const products = data.products.filter((product) => product.estado === 'habilitado')
+            dispatch(noveltiesLoaded(products));
 
         } catch (error) {
             console.log(error);
